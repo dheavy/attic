@@ -1,0 +1,12 @@
+{
+  "application": {
+    "name": "attic"
+  },
+  "express": {
+    "port": 3000
+  },
+  "logger": {
+    "filename": "attic.log",
+    "format": "combined"
+  }
+}

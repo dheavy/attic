@@ -4,31 +4,31 @@
   "description": "Does sentiment analysis on #havaslofts related tweets. Delivers visual results. Made with love.",
   "main": "app.js",
   "scripts": {
-    "test": "mocha"
+    "test": "mocha",
+    "start": "nodemon app.js"
   },
   "repository": {
     "type": "git",
     "url": "git@github.com:dheavy/attic.git"
   },
-  "keywords": [
-    "mypleasure"
-  ],
   "author": "Davy Peter Braun <hello@davybraun.com>",
   "license": "private",
   "dependencies": {
     "body-parser": "~1.9.1",
     "errorhandler": "~1.2.2",
     "express": "~4.10.0",
+    "express-session": "~1.9.1",
     "express-validator": "~2.6.0",
+    "lodash": "^2.4.1",
     "log4js": "~0.6.21",
     "method-override": "~2.3.0",
     "mongoose": "~3.8.18",
     "morgan": "~1.4.1",
     "nconf": "~0.6.9",
-    "node-twitter-api": "^1.5.0",
+    "nodemon": "^1.2.1",
     "sentiment": "^1.0.2",
     "string": "~2.2.0",
-    "express-session": "~1.9.1"
+    "twit": "^1.1.18"
   },
   "devDependencies": {
     "mocha": "~2.0.1",

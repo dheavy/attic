@@ -12,8 +12,10 @@
   "twitter": {
     "key": "dv7GKQFFtzTd7nGvz5AeynqHa",
     "secret": "tmJdKCCxnM5PzIJqpALa2AF0FvQgiR111qYZutFmLt3yx3UzwH",
-    "statuses": {
-      "track": "#havaslofts"
+    "token": "24672525-I7h7WUTJXuDLwe5Kd2fhbwfiEbiFtBWgSfvpu2pva",
+    "tokenSecret": "x04iWtKEkySzeISQ3aM19dA8PyQOVbQkPaagatPPA6NwY",
+    "search": {
+      "q": "#havaslofts"
     }
   }
 }

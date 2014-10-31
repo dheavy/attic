@@ -8,5 +8,12 @@
   "logger": {
     "filename": "attic.log",
     "format": "combined"
+  },
+  "twitter": {
+    "key": "dv7GKQFFtzTd7nGvz5AeynqHa",
+    "secret": "tmJdKCCxnM5PzIJqpALa2AF0FvQgiR111qYZutFmLt3yx3UzwH",
+    "statuses": {
+      "track": "#havaslofts"
+    }
   }
 }

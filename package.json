@@ -27,7 +27,8 @@
     "nconf": "~0.6.9",
     "node-twitter-api": "^1.5.0",
     "sentiment": "^1.0.2",
-    "string": "~2.2.0"
+    "string": "~2.2.0",
+    "express-session": "~1.9.1"
   },
   "devDependencies": {
     "mocha": "~2.0.1",

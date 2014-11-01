@@ -17,5 +17,10 @@
     "search": {
       "q": "#havaslofts"
     }
+  },
+  "afinn": {
+    "words": {
+      "crush": 1
+    }
   }
 }

@@ -26,9 +26,9 @@
     "morgan": "~1.4.1",
     "nconf": "~0.6.9",
     "nodemon": "^1.2.1",
-    "sentiment": "^1.0.2",
     "string": "~2.2.0",
-    "twit": "^1.1.18"
+    "twit": "^1.1.18",
+    "Sentimental": "~1.0.1"
   },
   "devDependencies": {
     "mocha": "~2.0.1",

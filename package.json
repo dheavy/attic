@@ -28,7 +28,7 @@
     "nodemon": "^1.2.1",
     "string": "~2.2.0",
     "twit": "^1.1.18",
-    "Sentimental": "~1.0.1"
+    "sentiment": "~1.0.2"
   },
   "devDependencies": {
     "mocha": "~2.0.1",

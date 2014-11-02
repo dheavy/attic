@@ -18,6 +18,9 @@
       "q": "#havaslofts"
     }
   },
+  "medium": {
+    "rss": "https://medium.com/feed/havas-lofts"
+  },
   "afinn": {
     "words": {
       "crush": 1

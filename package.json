@@ -28,7 +28,10 @@
     "nodemon": "^1.2.1",
     "string": "~2.2.0",
     "twit": "^1.1.18",
-    "sentiment": "~1.0.2"
+    "sentiment": "~1.0.2",
+    "request": "~2.47.0",
+    "cheerio": "~0.17.0",
+    "feedparser": "~0.19.2"
   },
   "devDependencies": {
     "mocha": "~2.0.1",

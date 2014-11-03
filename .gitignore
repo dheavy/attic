@@ -28,3 +28,7 @@ build/Release
 node_modules
 
 assets
+public/components/bootstrap
+public/components/hypejs
+public/components/jquery
+public/components/processing

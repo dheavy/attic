@@ -1,0 +1,6 @@
+{
+  "mongo": {
+    "url": "mongodb://localhost/attic",
+    "ttl": 600000
+  }
+}

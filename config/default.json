@@ -25,5 +25,13 @@
     "words": {
       "crush": 1
     }
+  },
+  "mongo": {
+    "url": "mongodb://localhost/attic",
+    "ttl": 3600000,
+    "source": {
+      "twitter": "twitter",
+      "blog": "blog"
+    }
   }
 }

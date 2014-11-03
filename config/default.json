@@ -18,8 +18,9 @@
       "q": "#havaslofts"
     }
   },
-  "medium": {
-    "rss": "https://medium.com/feed/havas-lofts"
+  "rss": {
+    "medium": "https://medium.com/feed/havas-lofts",
+    "gauloise": "https://unegauloisedansnyc.wordpress.com/feed"
   },
   "afinn": {
     "words": {

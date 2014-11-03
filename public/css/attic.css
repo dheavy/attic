@@ -1,4 +1,11 @@
 body {
   margin: 0;
+}
+
+.light {
   background-color: #ecf2f5;
+}
+
+.dark {
+  background-color: #18252b;
 }

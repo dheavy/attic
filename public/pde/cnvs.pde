@@ -1,5 +1,5 @@
 /*
-@pjs  preload="images/lightbackground.jpg";
+@pjs  preload="images/darkbackground.jpg";
       pauseOnBlur="true";
 */
 
@@ -26,6 +26,7 @@ void addVariation3(int value) {
 
 void setup() {
   started = false;
+  background(0, 0);
 
   // Set fullscreen.
   size(screen.width, screen.height);
@@ -39,7 +40,7 @@ void start() {
   H.init(this).autoClear(false);
 
   // Get colors from background image.
-  colorist = new HPixelColorist('images/lightbackground.jpg');
+  colorist = new HPixelColorist('images/darkbackground.jpg');
 
   // Use a swarm like a brush, loosely following mouse cursor.
   brush = new HSwarm().addGoal(H.mouse()).speed(10).turnEase(0.05f).twitch(twitch);

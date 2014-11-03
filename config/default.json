@@ -31,7 +31,8 @@
     "ttl": 3600000,
     "source": {
       "twitter": "twitter",
-      "blog": "blog"
+      "medium": "medium",
+      "gauloise": "gauloise"
     }
   }
 }

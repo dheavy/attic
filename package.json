@@ -15,10 +15,13 @@
   "license": "private",
   "dependencies": {
     "body-parser": "~1.9.1",
-    "errorhandler": "~1.2.2",
+    "cheerio": "~0.17.0",
+    "errorhandler": "^1.2.2",
     "express": "~4.10.0",
     "express-session": "~1.9.1",
     "express-validator": "~2.6.0",
+    "feedparser": "~0.19.2",
+    "jade": "^1.7.0",
     "lodash": "^2.4.1",
     "log4js": "~0.6.21",
     "method-override": "~2.3.0",
@@ -26,12 +29,11 @@
     "morgan": "~1.4.1",
     "nconf": "~0.6.9",
     "nodemon": "^1.2.1",
-    "string": "~2.2.0",
-    "twit": "^1.1.18",
-    "sentiment": "~1.0.2",
     "request": "~2.47.0",
-    "cheerio": "~0.17.0",
-    "feedparser": "~0.19.2"
+    "sentiment": "~1.0.2",
+    "serve-favicon": "^2.1.6",
+    "string": "~2.2.0",
+    "twit": "^1.1.18"
   },
   "devDependencies": {
     "mocha": "~2.0.1",

@@ -1,0 +1,23 @@
+{
+  "name": "attic",
+  "version": "0.0.1",
+  "authors": [
+    "Davy Peter Braun <d.braun@wcie.fr>"
+  ],
+  "description": "Does sentiment analysis on #havaslofts related tweets and blog posts. Delivers visual results. Made with love.",
+  "license": "MIT",
+  "homepage": "http://attic.davybraun.com",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "public/components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.3.0",
+    "hypejs": "*",
+    "processing": "~1.4.8"
+  }
+}

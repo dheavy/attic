@@ -1,6 +1,11 @@
 doctype html
-html(lang="en")
+html(lang='en')
   head
     title= title
+    link(href='/bootstrap/dist/css/bootstrap.min.css', rel='stylesheet')
+    link(href='/css/attic.css', rel='stylesheet')
+    script(src='/jquery/dist/jquery.min.js')
+    script(src='/processing/processing.min.js')
+    script(src='/js/attic.js')
   body
-    h1= content
+    canvas(id='cnvs', with='100%', height='100%', data-processing-sources='/pde/cnvs.pde /hypejs/HYPE.pde') Can't you see the canvas?

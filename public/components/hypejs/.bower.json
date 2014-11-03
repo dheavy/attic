@@ -1,0 +1,14 @@
+{
+  "name": "hypejs",
+  "homepage": "https://github.com/hype/HYPE_Processing",
+  "_release": "83df75d9cb",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "83df75d9cb82b671a31954e4755a5b3e543f87b6"
+  },
+  "_source": "git://github.com/hype/HYPE_Processing.git",
+  "_target": "*",
+  "_originalSource": "hypejs",
+  "_direct": true
+}

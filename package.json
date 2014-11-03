@@ -1,7 +1,7 @@
 {
   "name": "attic",
   "version": "0.1.0",
-  "description": "Does sentiment analysis on #havaslofts related tweets. Delivers visual results. Made with love.",
+  "description": "Does sentiment analysis on #havaslofts related tweets and blog posts. Delivers visual results. Made with love.",
   "main": "app.js",
   "scripts": {
     "test": "mocha",

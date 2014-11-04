@@ -72,7 +72,6 @@ $(document).ready(function() {
 
     intv = setInterval(function() {
       if (pjs) {
-        pjs.addMultiplier(multiplier);
         pjs.addTwitchVariation(twitchVariation);
         pjs.addRandMaxWVariation(randMaxW);
         pjs.addRandMaxHVariation(randMaxH);

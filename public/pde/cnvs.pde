@@ -49,14 +49,14 @@ void start() {
   colorist = new HPixelColorist('images/lightbackground.jpg');
 
   // Use a swarm like a brush, loosely following mouse cursor.
-  brush = new HSwarm().addGoal(H.mouse()).speed(10).turnEase(0.05f).twitch(twitch);
+  brush = new HSwarm().addGoal(H.mouse()).speed(10).turnEase(0.1f).twitch(twitch);
 
   // Limit the swarm to an object pool of 70 elements.
   objPool = new HDrawablePool(70);
 
   // Spawn object from pool to draw (see swarm examples from docs).
   objPool.autoAddToStage()
-         .add(new HRect().rounding(10))
+         .add(new HRect().rounding(20))
          .onCreate(
            new HCallback() {
              public void run(Object obj) {

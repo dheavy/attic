@@ -8,6 +8,70 @@ body {
 canvas {
   position: fixed;
   top: -30px;
+  z-index: 1;
+}
+
+#content {
+  position: relative;
+  z-index: 2;
+}
+
+#tweets-content, #medium-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: none;
+}
+
+.container {
+  margin-top: 5%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "kepler-std",serif;
+  font-style: normal;
+  font-weight: 200;
+  font-size: 45px;
+  color: #868686;
+}
+
+p, a {
+  font-family: "inconsolata",sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  color: #868686;
+  font-size: 15px;
+}
+
+p.last, a.share {
+  float: left;
+}
+
+p.last {
+  margin-right: 10px;
+}
+
+div#info {
+  position: fixed;
+  bottom: 20px;
+}
+
+a {
+  text-decoration: underline;
+  transition: all 1s;
+}
+
+a:hover {
+  color:#202020;
+}
+
+.positive {
+  color: #90BAAA;
+}
+
+.negative {
+  color: #D28E8E;
+  padding-left: 8px;
 }
 
 user-select: none;

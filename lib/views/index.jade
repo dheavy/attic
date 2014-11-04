@@ -5,7 +5,38 @@ html(lang='en')
     link(href='/bootstrap/dist/css/bootstrap.min.css', rel='stylesheet')
     link(href='/css/attic.css', rel='stylesheet')
     script(src='/jquery/dist/jquery.min.js')
+    script(src='/lodash/dist/lodash.min.js')
     script(src='/processing/processing.min.js')
     script(src='/js/attic.js')
+    script(src='//use.typekit.net/jjj5nmh.js')
+    script try{Typekit.load();}catch(e){}
+    script !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs')
   body
     canvas(id='cnvs', with='100%', height='120%', data-processing-sources='/pde/cnvs.pde /hypejs/HYPE.pde') Can't you see the canvas?
+    div(id='content', class='container')
+      div(id='main')
+        h3 <em>Attic</em> is a piece of generative art.
+        br
+        p It analyses <em>sentiments</em> of tweets marked <a href="https://twitter.com/search?q=%23HavasLofts" target="_blank">#HavasLofts</a> and articles related to the Havas Lofts initiative on <a href="https://medium.com/havas-lofts/" target="_blank">Medium</a>.
+        p Based on the emotional valence of their words, it <em>feels</em> the mood of Havas Lofts members.
+        br
+        p <em>The results of the analysis influence the behaviour of the virtual paintbrush you're painting with.</em>
+        br
+        p.last Now click anywhere, and move your mouse. Then spread the love.
+        a(href="https://twitter.com/share" class="share twitter-share-button" data-text="Attic paints mood using #sentimentanalysis on tweets and blog from #havaslofts" data-via="davypeterbraun" data-count="none" data-hashtags="havaslofts") Tweet
+
+      div(id='tweets-content')
+        h3 Tweets data
+        br
+        p Score: <span id="tweets-data-score">0</span> | Comparative value: <span id="tweets-data-value">0</span><span id="tweets-opinion"></span>
+        p The follow terms were captured: <span id='tweets-tokens'></span>
+
+      div(id='medium-content')
+        h3 Medium blog posts data
+        br
+        p Score: <span id="medium-data-score">0</span> | Comparative value: <span id="medium-data-value">0</span> <span id="medium-opinion"></span>
+        p The follow terms were captured: <span id='medium-tokens'></span>
+
+      div(id='info')
+        p Press "s" to save your painting.
+        p <a href="#" id="tweets-data-toggle">Show/hide tweets data</a> | <a href="#" id="medium-data-toggle">Show/hide Medium data</a>

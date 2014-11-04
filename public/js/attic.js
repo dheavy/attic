@@ -27,12 +27,16 @@ $(document).ready(function() {
     attemptInit();
   });
 
+  function randomIntFromInterval(min, max) {
+    return Math.floor(Math.random() * (max - min + 1) + min);
+  }
+
   function attemptInit() {
     if (!tweetsData || !mediumData) return;
 
     var randMaxW = tweetsData.average * 300,
         randMaxH = mediumData.average * 300,
-        twitchVariation = Math.floor(Math.random() * 700 + 1),
+        twitchVariation = randomIntFromInterval(1, 500),
         multiplier = mediumData.numOfEntries * mediumData.numOfEntries;
 
     intv = setInterval(function() {

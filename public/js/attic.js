@@ -20,14 +20,18 @@ var $win = $(window),
     mediumData = null,
     showingMainContent = true,
     showingTweets = false,
-    showingMedium = false;
+    showingMedium = false,
+    saveModalOpened = false;
 
 $(document).ready(function() {
   var $mainContent = $('#main'),
       $tweetsContent = $('#tweets-content'),
       $mediumContent = $('#medium-content'),
       $tweetsToggle = $('#tweets-data-toggle'),
-      $mediumToggle = $('#medium-data-toggle');
+      $mediumToggle = $('#medium-data-toggle'),
+      $savedImageModal = $('#save-modal'),
+      $savedImage = $('#saved-image-container span'),
+      $savedImageInstructions = $('#saved-image-container p');
 
   configureProcessingSizing = function() {
     function resize() {
@@ -73,6 +77,9 @@ $(document).ready(function() {
         pjs.addRandMaxWVariation(randMaxW);
         pjs.addRandMaxHVariation(randMaxH);
         pjs.start();
+
+        setupSave();
+
         clearInterval(intv);
       } else {
         pjs = Processing.getInstanceById('cnvs');
@@ -155,6 +162,43 @@ $(document).ready(function() {
         showingMedium = false;
         showingMainContent = true;
       }
+    });
+  }
+
+  function setupSave() {
+    $(document).on('keyup', function(e) {
+      if (e.keyCode === 83) {
+        save();
+      }
+    });
+  }
+
+  function closeSaveModal(e) {
+    if (e.target.id === 'save-modal') {
+      $savedImageModal.animate({ opacity: 0 }, 500, function() {
+        $savedImage.html('');
+        $savedImageModal.css('pointer-events', 'none');
+        $savedImageInstructions.css('opacity', 0);
+        saveModalOpened = false;
+      });
+    }
+  }
+
+  function save() {
+    if (saveModalOpened) return;
+
+    var canvas = document.getElementById('cnvs'),
+        dataURL = canvas.toDataURL();
+
+    $savedImageModal.animate({ opacity: 1 }, 500, function() {
+      $savedImage
+        .fadeOut(0)
+        .append('<img src=' + dataURL + ' width="100%">')
+        .fadeIn('fast');
+      $savedImageModal.css('pointer-events', 'auto');
+      $savedImageModal.on('click', closeSaveModal);
+      $savedImageInstructions.animate({ opacity: 1 }, 1000);
+      saveModalOpened = true;
     });
   }
 });

@@ -51,8 +51,8 @@ void start() {
   // Use a swarm like a brush, loosely following mouse cursor.
   brush = new HSwarm().addGoal(H.mouse()).speed(10).turnEase(0.1f).twitch(twitch);
 
-  // Limit the swarm to an object pool of 70 elements.
-  objPool = new HDrawablePool(70);
+  // Limit the swarm to an object pool of 50 elements.
+  objPool = new HDrawablePool(50);
 
   // Spawn object from pool to draw (see swarm examples from docs).
   objPool.autoAddToStage()

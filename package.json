@@ -16,6 +16,7 @@
   "license": "private",
   "dependencies": {
     "body-parser": "~1.9.1",
+    "bower": "^1.3.12",
     "cheerio": "~0.17.0",
     "errorhandler": "^1.2.2",
     "express": "~4.10.0",

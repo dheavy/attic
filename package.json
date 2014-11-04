@@ -5,7 +5,8 @@
   "main": "app.js",
   "scripts": {
     "test": "mocha",
-    "start": "nodemon app.js"
+    "start": "nodemon app.js",
+    "postinstall": "bower install"
   },
   "repository": {
     "type": "git",

@@ -187,6 +187,8 @@ $(document).ready(function() {
   function save() {
     if (saveModalOpened) return;
 
+    ga('send', 'event', 'useraction', 'saveimage');
+
     var canvas = document.getElementById('cnvs'),
         dataURL = canvas.toDataURL();
 

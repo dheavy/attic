@@ -1,27 +1,51 @@
 var $win = $(window),
     pjs = Processing.getInstanceById('cnvs'),
-    intv, configureProcessingSizing;
+    intv, configureProcessingSizing,
+    tweetsData = null,
+    mediumData = null;
 
 $(document).ready(function() {
   configureProcessingSizing = function() {
     function resize() {
       if (pjs != null) {
-        pjs.resize($win.width(), $win.height());
+        pjs.resize($win.width(), $win.height() + 30);
       }
     }
     $win.resize(resize);
     resize();
   };
 
-  intv = setInterval(function() {
-    if (pjs) {
-      pjs.addVariation1(10);
-      pjs.addVariation2(10);
-      pjs.addVariation3(6);
-      pjs.start();
-      clearInterval(intv);
-    } else {
-      pjs = Processing.getInstanceById('cnvs');
-    }
-  }, 500);
+  $.post('/tweets', {}, function(data) {
+    tweetsData = data;
+    console.log(data);
+    attemptInit();
+  });
+
+  $.post('/medium', {}, function(data) {
+    mediumData = data;
+    console.log(data);
+    attemptInit();
+  });
+
+  function attemptInit() {
+    if (!tweetsData || !mediumData) return;
+
+    var randMaxW = tweetsData.average * 300,
+        randMaxH = mediumData.average * 300,
+        twitchVariation = Math.floor(Math.random() * 700 + 1),
+        multiplier = mediumData.numOfEntries * mediumData.numOfEntries;
+
+    intv = setInterval(function() {
+      if (pjs) {
+        pjs.addMultiplier(multiplier);
+        pjs.addTwitchVariation(twitchVariation);
+        pjs.addRandMaxWVariation(randMaxW);
+        pjs.addRandMaxHVariation(randMaxH);
+        pjs.start();
+        clearInterval(intv);
+      } else {
+        pjs = Processing.getInstanceById('cnvs');
+      }
+    }, 500);
+  }
 });

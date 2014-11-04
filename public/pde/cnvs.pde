@@ -1,5 +1,5 @@
 /*
-@pjs  preload="images/darkbackground.jpg";
+@pjs  preload="images/lightbackground.jpg";
       pauseOnBlur="true";
 */
 
@@ -10,23 +10,28 @@ HTimer          timer;
 int             twitch;
 int             randMaxW;
 int             randMaxH;
+int             multiplier;
 boolean         started;
+PImage          img;
 
-void addVariation1(int value) {
-  twitch = 10 * value;
+void addMultiplier(int value) {
+  multipler = value;
 }
 
-void addVariation2(int value) {
+void addTwitchVariation(int value) {
+  twitch = value;
+}
+
+void addRandMaxWVariation(int value) {
   randMaxW = value;
 }
 
-void addVariation3(int value) {
+void addRandMaxHVariation(int value) {
   randMaxH = value;
 }
 
 void setup() {
   started = false;
-  background(0, 0);
 
   // Set fullscreen.
   size(screen.width, screen.height);
@@ -36,11 +41,12 @@ void setup() {
 }
 
 void start() {
+  background(0, 0);
   // Init HYPE.
   H.init(this).autoClear(false);
 
   // Get colors from background image.
-  colorist = new HPixelColorist('images/darkbackground.jpg');
+  colorist = new HPixelColorist('images/lightbackground.jpg');
 
   // Use a swarm like a brush, loosely following mouse cursor.
   brush = new HSwarm().addGoal(H.mouse()).speed(10).turnEase(0.05f).twitch(twitch);

@@ -14,10 +14,6 @@ int             multiplier;
 boolean         started;
 PImage          img;
 
-void addMultiplier(int value) {
-  multipler = value;
-}
-
 void addTwitchVariation(int value) {
   twitch = value;
 }

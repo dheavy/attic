@@ -51,21 +51,21 @@ void start() {
   // Use a swarm like a brush, loosely following mouse cursor.
   brush = new HSwarm().addGoal(H.mouse()).speed(10).turnEase(0.05f).twitch(twitch);
 
-  // Limit the swarm to an object pool of 60 elements.
-  objPool = new HDrawablePool(60);
+  // Limit the swarm to an object pool of 70 elements.
+  objPool = new HDrawablePool(70);
 
   // Spawn object from pool to draw (see swarm examples from docs).
   objPool.autoAddToStage()
-         .add(new HRect().rounding(4))
+         .add(new HRect().rounding(10))
          .onCreate(
            new HCallback() {
              public void run(Object obj) {
                HDrawable drawable = (HDrawable) obj;
 
-               drawable.size((int)random(2, randMaxW), (int)random(2, randMaxH))
+               drawable.size((int)random(1, randMaxW), (int)random(1, randMaxH))
                        .noStroke()
                        .fill(#000000)
-                       .loc(width / 2, height / 2);
+                       .loc(H.mouse().x(), H.mouse().y());
 
                colorist.applyColor(drawable);
                brush.addTarget(drawable);

@@ -2,5 +2,9 @@
   "mongo": {
     "url": "mongodb://qObtcfqTsthv:qVdwGirHsDsV@mongosoup-shared-db005.mongosoup.de:31839/cc_qObtcfqTsthv",
     "ttl": 600000
-  }
+  },
+  "logger": {
+    "filename": "attic-prod.log",
+    "format": "combined"
+  },
 }

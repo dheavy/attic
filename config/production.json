@@ -6,5 +6,5 @@
   "logger": {
     "filename": "attic-prod.log",
     "format": "combined"
-  },
+  }
 }

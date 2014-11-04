@@ -1,7 +1,6 @@
 # Logs
-logs
 *.log
-!attic-prod.log
+!logs/attic-prod.log
 
 # Runtime data
 pids

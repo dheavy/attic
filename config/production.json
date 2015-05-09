@@ -1,6 +1,6 @@
 {
   "mongo": {
-    "url": "mongodb://qObtcfqTsthv:qVdwGirHsDsV@mongosoup-shared-db005.mongosoup.de:31839/cc_qObtcfqTsthv",
+    "url": null,
     "ttl": 600000
   },
   "logger": {
